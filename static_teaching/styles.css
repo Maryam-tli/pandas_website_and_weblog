@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav a {
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.main-content, .classes-list {
+    padding: 2rem;
+    background-color: white;
+    margin: 1rem auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.installation {
+    background-color: #eef;
+    padding: 1rem;
+    border-left: 5px solid #4CAF50;
+    margin-top: 1rem;
+}
+
+.class-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.class-item a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.class-item p {
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 0.5rem;  /* کاهش ارتفاع فوتر */
+    background-color: #4CAF50;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.tags {
+    margin-top: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #4CAF50; /* رنگ سبز برای برچسب‌ها */
+    color: white;
+    padding: 5px 10px;
+    margin: 5px 5px 0 0;
+    border-radius: 20px; /* گوشه‌های گرد */
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: capitalize; /* اولین حرف بزرگ شود */
+    transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #388E3C; /* تغییر رنگ هنگام هاور */
+    cursor: pointer;
+}
+
+.no-tag {
+    background-color: #9E9E9E; /* رنگ خاکستری برای حالت بدون تگ */
+}
