@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas Module - Python Data Analysis</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Pandas: Python Data Analysis Library</h1>
+        <nav>
+            <a href="{% url 'index_view' %}">Home</a>
+            <a href="{% url 'pandas_class_list' %}">Classes</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h2>What is Pandas?</h2>
+        <p>
+            Pandas is a fast, powerful, flexible, and easy-to-use open-source data analysis and manipulation tool, 
+            built on top of the Python programming language. It provides data structures and functions needed to 
+            work seamlessly with structured data, such as tabular, multidimensional, and time-series data.
+        </p>
+
+        <h3>Key Features:</h3>
+        <ul>
+            <li>DataFrame object for tabular data.</li>
+            <li>Handling of missing data.</li>
+            <li>Flexible reshaping and pivoting of datasets.</li>
+            <li>Label-based slicing, indexing, and subsetting of large datasets.</li>
+            <li>Efficient merging and joining of datasets.</li>
+        </ul>
+
+        <section class="installation">
+            <h2>How to Install Pandas?</h2>
+            <pre><code>pip install pandas</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pandas Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

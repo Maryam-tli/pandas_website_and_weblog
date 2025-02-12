@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ pandas_class.title }} - Details</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ pandas_class.title }}</h1>
+        <nav>
+            <a href="{% url 'index_view' %}">Home</a>
+            <a href="{% url 'pandas_class_list' %}">Back to Classes</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h2>Description</h2>
+        <p>{{ pandas_class.description }}</p>
+
+        <h2>content:</h2>
+        <p>{{ pandas_class.content }}</p>
+
+        <h3>Example Code:</h3>
+        <pre><code>{{ pandas_class.example_code }}</code></pre>
+
+        <h3>Tags:</h3>
+        <div class="tags">
+            {% for tag in pandas_class.tags.all %}
+                <span class="tag">{{ tag.name }}</span>
+            {% empty %}
+                <span class="tag no-tag">No tags available</span>
+            {% endfor %}
+        </div>
+
+
+
+        <p><strong>Published on:</strong> {{ pandas_class.published }}</p>
+        <p><strong>Views:</strong> {{ pandas_class.views }}</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pandas Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas Classes</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Explore Pandas Classes</h1>
+        <nav>
+            <a href="{% url 'index_view' %}">Home</a>
+        </nav>
+    </header>
+
+    <section class="classes-list">
+        {% for pandas_class in classes %}
+        <div class="class-item">
+            <a href="{% url 'pandas_class_detail' pandas_class.slug %}">{{ pandas_class.title }}</a>
+            <p>{{ pandas_class.description }}</p>
+        </div>
+        {% empty %}
+        <p>No classes available at the moment.</p>
+        {% endfor %}
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pandas Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
