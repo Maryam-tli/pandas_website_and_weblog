@@ -37,9 +37,25 @@
             <pre><code>pip install pandas</code></pre>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Pandas Learning Hub. All rights reserved.</p>
-    </footer>
+    <main class="main-content">
+        <!-- نمایش عنوان پست فعلی -->
+        <h1 class="post-title">
+            <a href="{% url 'pandas_class_detail' current_post.slug %}">{{ current_post.title }}</a>
+        </h1>
+    
+        <!-- نمایش محتوای پست فعلی -->
+        <p>{{ current_post.content }}</p>
+    
+        <div class="navigation">
+            {% if previous_index is not None %}
+                <a href="?index={{ previous_index }}">← Previous</a>
+            {% endif %}
+    
+            {% if next_index is not None %}
+                <a href="?index={{ next_index }}">Next →</a>
+            {% endif %}
+        </div>
+    </main>
+    
 </body>
 </html>
