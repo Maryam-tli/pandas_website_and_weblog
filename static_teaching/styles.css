@@ -93,3 +93,39 @@ footer {
 .no-tag {
     background-color: #9E9E9E; /* رنگ خاکستری برای حالت بدون تگ */
 }
+
+.navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.navigation-links a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation-links a.prev-post {
+    margin-right: auto;
+}
+
+.navigation-links a.next-post {
+    margin-left: auto;
+}
+
+.navigation-links a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.navigation-links a:active {
+    background-color: #0056b3;
+}
