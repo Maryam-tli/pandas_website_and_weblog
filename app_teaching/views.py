@@ -42,12 +42,7 @@ def pandas_class_detail(request, slug):
     pandas_class.views += 1
     pandas_class.save(update_fields=['views'])
 
-    # پیدا کردن پست قبلی و بعدی
-    previous_post = PandasClass.objects.filter(status='published', published__lte=timezone.now(), id__lt=pandas_class.id).order_by('-id').first()
-    next_post = PandasClass.objects.filter(status='published', published__lte=timezone.now(), id__gt=pandas_class.id).order_by('id').first()
 
     return render(request, 'class_detail.html', {
-        'pandas_class': pandas_class,
-        'previous_post': previous_post,
-        'next_post': next_post,
+        'pandas_class': pandas_class
     })
