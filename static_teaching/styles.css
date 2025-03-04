@@ -6,12 +6,31 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #59af4c;
     color: white;
     text-align: center;
     padding: 1rem;
 }
 
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+    background-color: #367c39;
+}
 
 .main-content, .classes-list {
     padding: 2rem;
