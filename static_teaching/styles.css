@@ -12,11 +12,6 @@ header {
     padding: 1rem;
 }
 
-nav a {
-    margin: 0 1rem;
-    color: white;
-    text-decoration: none;
-}
 
 .main-content, .classes-list {
     padding: 2rem;
@@ -58,16 +53,6 @@ h2, h3 {
     color: #666;
 }
 
-footer {
-    text-align: center;
-    padding: 0.5rem;  /* کاهش ارتفاع فوتر */
-    background-color: #4CAF50;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 .tags {
     margin-top: 1rem;
 }
@@ -93,39 +78,51 @@ footer {
 .no-tag {
     background-color: #9E9E9E; /* رنگ خاکستری برای حالت بدون تگ */
 }
-
-.navigation-links {
+.navigation {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap; /* برای واکنش‌گرا کردن */
 }
 
-.navigation-links a {
+.navigation a {
     text-decoration: none;
-    color: #007BFF;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #21502f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px 0; /* فاصله بین لینک‌ها در حالت واکنش‌گرا */
 }
 
-.navigation-links a.prev-post {
-    margin-right: auto;
+.navigation a:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.post-detail {
+text-align: center;
+padding: 20px;
+background: #ffffff;
+border-radius: 8px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+margin: 20px auto;
+width: 60%;
 }
 
-.navigation-links a.next-post {
-    margin-left: auto;
+.post-title a {
+text-decoration: none;
+color: #21502f;
+font-size: 28px;
+font-weight: bold;
+transition: color 0.3s ease-in-out;
 }
 
-.navigation-links a:hover {
-    background-color: #007BFF;
-    color: #fff;
+.post-title a:hover {
+color: #abec9a;
 }
 
-.navigation-links a:active {
-    background-color: #0056b3;
+.post-content {
+font-size: 18px;
+line-height: 1.6;
+color: #333;
+margin-top: 10px;
 }
