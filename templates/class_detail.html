@@ -36,7 +36,7 @@
 
 
 
-        <p><strong>Published on:</strong> {{ pandas_class.published }}</p>
+        <p><strong>Published on:</strong> {{ pandas_class.published|date:"d M Y" }}</p>
         <p><strong>Views:</strong> {{ pandas_class.views }}</p>
 
     </main>
