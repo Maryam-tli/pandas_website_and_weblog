@@ -18,7 +18,7 @@
         {% for pandas_class in classes %}
         <div class="class-item">
             <a href="{% url 'pandas_class_detail' pandas_class.slug %}">{{ pandas_class.title }}</a>
-            <p>{{ pandas_class.description|truncatewords:10 }}</p>
+            <p>{{ pandas_class.description }}</p>
         </div>
         {% empty %}
         <p>No classes available at the moment.</p>
