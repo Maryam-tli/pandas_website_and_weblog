@@ -45,7 +45,7 @@
         </h1>
     
         <!-- نمایش محتوای پست فعلی -->
-        <p>{{ current_post.content }}</p>
+        <p>{{ current_post.content|truncatewords:18 }}</p>
     
         <div class="navigation">
             {% if previous_index is not None %}
